@@ -1,0 +1,183 @@
+@use "../scss/abstracts/" as *;
+
+.header {
+  .container {
+    padding: 2rem 1.125rem;
+    display: flex;
+    align-items: center;
+    gap: 2.625rem;
+
+    @include mobile {
+      justify-content: space-between;
+      padding: 2rem 2rem;
+      position: relative;
+      width: 100%;
+      margin: 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav {
+      @include flex(center, space-between);
+      flex: 1;
+
+      &__items {
+        display: flex;
+        align-items: center;
+      }
+
+      &__item {
+        padding-right: 2rem;
+      }
+
+      &__link {
+        color: $clr-grey-200;
+        &:hover {
+          color: $clr-grey-300;
+        }
+      }
+
+      &__btns {
+        @include flex(center, inherit);
+        gap: 2.125rem;
+        font-weight: bold;
+        p {
+          &:first-child {
+            color: $clr-grey-200;
+            &:hover,
+            &:active {
+              color: $clr-grey-300;
+            }
+          }
+        }
+      }
+
+      @include mobile {
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        width: 90%;
+        transform: translateX(-50%);
+        @include flex;
+        flex-direction: column;
+        background: $clr-primary-dark-violet;
+        border-radius: 15px;
+        padding: 2.5rem 2rem;
+        z-index: 999999;
+
+        &__items {
+          border-bottom: 1px solid $clr-grey-200;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding-bottom: 2rem;
+        }
+
+        &__item {
+          padding-bottom: 1.125rem;
+        }
+
+        &__link {
+          color: $white;
+          &:hover {
+            color: $clr-primary-cyan;
+          }
+        }
+
+        &__btns {
+          flex-direction: column;
+          margin-top: 2rem;
+          font-weight: bold;
+          width: 100%;
+          p {
+            width: 100%;
+            display: inline-block;
+            text-align: center;
+            &:first-child {
+              margin-bottom: 1.125rem;
+              color: $white;
+              &:hover,
+              &:active {
+                color: $clr-primary-cyan;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .mobile-menu {
+      font-size: 2rem;
+    }
+  }
+}
+
+.footer {
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+  background: #232027;
+  transition: color 0.4s linear;
+  margin-top: -10px;
+
+  &__inner {
+    @include flex(center, space-between);
+
+    @include mobile {
+      @include flex(center, center);
+      flex-direction: column;
+      gap: 2.5rem;
+      text-align: center;
+    }
+
+    &-brand {
+      padding-right: 10%;
+      a {
+        font-size: 35px;
+        color: $white;
+        font-weight: 700;
+      }
+
+      @include mobile {
+        padding-right: 0;
+      }
+    }
+
+    &-social {
+      display: flex;
+      color: $white;
+      gap: 1.125rem;
+
+      .icon {
+        font-size: 1.825rem;
+        cursor: pointer;
+
+        &:hover {
+          color: $clr-primary-cyan;
+        }
+      }
+    }
+  }
+
+  &__title {
+    color: $white;
+    font-weight: 700;
+    margin-bottom: 1.125rem;
+  }
+
+  &__links {
+    p {
+      color: $clr-grey-200;
+      font-weight: 500;
+      margin-bottom: 0.125rem;
+      cursor: pointer;
+
+      &:hover {
+        color: $clr-primary-cyan;
+      }
+    }
+  }
+}

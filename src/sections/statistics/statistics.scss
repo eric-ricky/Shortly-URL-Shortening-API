@@ -1,0 +1,154 @@
+@use "../../scss/abstracts/" as *;
+
+.statistics {
+  background: #f0f1f6;
+  padding-top: 40px;
+  padding-bottom: 100px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  .container {
+    .form-container {
+      position: relative;
+      margin-top: -140px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $clr-primary-dark-violet;
+      border-radius: 18px;
+      padding: 3.6rem 1rem;
+      overflow: hidden;
+
+      @include mobile {
+        width: 98%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 2.8rem 1rem;
+      }
+
+      img {
+        &.mobile {
+          display: none;
+        }
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        @include mobile {
+          &.desktop {
+            display: none;
+          }
+
+          &.mobile {
+            display: block;
+            left: 32%;
+          }
+        }
+      }
+    }
+  }
+
+  &__inner {
+    padding-top: 8rem;
+
+    &-header {
+      text-align: center;
+      @include flex;
+      flex-direction: column;
+      margin-bottom: 2rem;
+
+      .subtitle {
+        text-align: center;
+        width: 42%;
+        margin-top: 14px;
+
+        @include mobile {
+          width: 100%;
+        }
+      }
+    }
+
+    &-content {
+      @include flex;
+      gap: 3.125rem;
+      position: relative;
+
+      @include mobile {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 5rem;
+        gap: 1rem;
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 80%;
+        height: 10px;
+        background: $clr-primary-cyan;
+        display: block;
+
+        @include mobile {
+          width: 10px;
+          height: 580px;
+        }
+      }
+
+      .card {
+        width: 350px;
+        background: $white;
+        padding: 2.625rem 2.125rem;
+        border-radius: 10px;
+        z-index: 100;
+
+        &:nth-child(2) {
+          margin-top: 4.2rem;
+          @include mobile {
+            margin-top: 4rem;
+          }
+        }
+
+        &:nth-child(3) {
+          margin-top: 8.2rem;
+          @include mobile {
+            margin-top: 4rem;
+          }
+        }
+
+        &__header {
+          @include flex;
+          background: $clr-grey-400;
+          border-radius: 50%;
+          padding: 1.125rem;
+          width: 5rem;
+          height: 5rem;
+          margin-top: -5rem;
+
+          @include mobile {
+            margin-right: auto;
+            margin-left: auto;
+          }
+        }
+
+        &__content {
+          padding-top: 2rem;
+
+          &-title {
+            font-weight: 700;
+            font-size: 22px;
+            color: $clr-grey-300;
+            margin-bottom: 0.625rem;
+          }
+
+          &-body {
+            color: $clr-grey-200;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

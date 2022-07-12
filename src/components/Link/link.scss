@@ -1,0 +1,50 @@
+@use "../../scss/abstracts/" as *;
+
+.link {
+  background: $white;
+  width: 100%;
+  @include flex(center, space-between);
+  margin-top: 2rem;
+  padding: 1.125rem 2rem;
+  border-radius: 8px;
+
+  @include mobile {
+    padding: 0rem;
+    @include flex(start, inherit);
+    flex-direction: column;
+  }
+
+  &__original {
+    @include mobile {
+      padding: 1.025rem;
+      width: 100%;
+      border-bottom: 1px solid $clr-grey-100;
+    }
+  }
+
+  &__shortened {
+    @include flex(center, inherit);
+    gap: 1.2rem;
+
+    @include mobile {
+      padding: 1.625rem 1.125rem;
+      @include flex(start, inherit);
+      flex-direction: column;
+      width: 100%;
+    }
+
+    &-link {
+      color: $clr-primary-cyan;
+    }
+
+    &-btn {
+      text-align: center;
+      border-radius: 8px !important;
+      cursor: pointer;
+      @include mobile {
+        width: 100%;
+        flex: 1;
+      }
+    }
+  }
+}

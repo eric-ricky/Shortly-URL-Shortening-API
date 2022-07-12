@@ -1,0 +1,61 @@
+@use "../../scss/abstracts/" as *;
+
+.boost {
+  background: $clr-primary-dark-violet;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  margin: 0;
+
+  position: relative;
+  overflow: hidden;
+
+  @include mobile {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+  img {
+    &.mobile {
+      display: none;
+    }
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    @include mobile {
+      &.desktop {
+        display: none;
+      }
+
+      &.mobile {
+        display: block;
+        // left: 32%;
+      }
+    }
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+    // background-color: aliceblue;
+
+    &-content {
+      @include flex;
+      flex-direction: column;
+
+      .title {
+        color: $white !important;
+        margin-bottom: 2rem;
+        z-index: 9999;
+      }
+
+      .btn-container {
+        z-index: 9999;
+      }
+    }
+  }
+}

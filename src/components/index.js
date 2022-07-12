@@ -1,0 +1,11 @@
+data: ok: true;
+result: code: "c2vctH";
+full_share_link: "https://shrtco.de/share/c2vctH";
+full_short_link: "https://shrtco.de/c2vctH";
+full_short_link2: "https://9qr.de/c2vctH";
+full_short_link3: "https://shiny.link/c2vctH";
+original_link: "http://example.org/very/long/link.html";
+share_link: "shrtco.de/share/c2vctH";
+short_link: "shrtco.de/c2vctH";
+short_link2: "9qr.de/c2vctH";
+short_link3: "shiny.link/c2vctH";
