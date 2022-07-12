@@ -28,12 +28,12 @@ Users should be able to:
 
 ### Screenshot
 
-![image](./screenshot1.jpeg)
+![image](./screenshot2.jpeg)
 
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://eric-url-shortener-api-frontendmentor.netlify.app/](https://eric-url-shortener-api-frontendmentor.netlify.app/)
 
 ## My process
 
